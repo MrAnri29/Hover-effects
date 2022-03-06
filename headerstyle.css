@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+* {
+    font-family: "Poopins", sans-serif;
+    font-weight: 500;
+}
+body {
+    background-color: #252839;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+header {
+    display: inline-block;
+    justify-content: center;
+}
+ul {
+    position: relative;
+    display: flex;
+    gap: 50px;
+    padding: 0;
+    margin-top: 45vh;
+    margin-left: 20vh;
+}
+ul li {
+    position: relative;
+    list-style: none;
+}
+ul li a {
+    position: relative;
+    font-size: 3em;
+    text-decoration: none;
+    line-height: 1em;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: transparent;
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.5);
+}
+ul li a::before {
+    content: attr(datatext);
+    position: absolute;
+    color: var(--clr);
+    width: 0;
+    overflow: hidden;
+    transition: 1s;
+    border-right: none;
+    -webkit-text-stroke: 1px var(--clr);
+}
+ul li a:hover::before {
+    width: 100%;
+    filter: drop-shadow(0 0 25px var(--clr));
+    border-right:  5px solid var(--clr);
+}
